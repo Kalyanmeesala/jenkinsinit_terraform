@@ -21,3 +21,13 @@ resource "aws_s3_bucket" "b" {
     Environment = "Dev"
   }
 }
+
+resource "aws_s3_bucket" "news3b" {
+  bucket = "jenkins-terraform-news3b"
+  acl    = "private"
+
+  tags = {
+    Name        = "jenkins-terraform-intigration"
+    Environment = "Dev"
+  }
+}
